@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lista de picvas</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src ="main.js" defer> </script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Minha Lista de Tarefas</h1>
+
+        <div class="formulario">
+            <input 
+                type="text" 
+                id="tarefaInput" 
+                placeholder="Digite uma tarefa..."
+            >
+
+            <button id="adicionarBtn">
+                Adicionar
+            </button>
+        </div>
+
+        <p id="contador">
+            Tarefas: 0
+        </p>
+
+        <ul id="listaTarefas">
+
+            <li class="tarefa">
+                <span>Estudar JavaScript</span>
+
+                <button class="concluirBtn" onclick="alert('Teste')">
+                    Concluir
+                </button>
+
+                <button class="removerBtn">
+                    Remover
+                </button>
+            </li>
+
+            <li class="tarefa">
+                <span>Praticar DOM</span>
+
+                <button class="concluirBtn">
+                    Concluir
+                </button>
+
+                <button class="removerBtn">
+                    Remover
+                </button>
+            </li>
+
+        </ul>
+
+        <p id="mensagem"></p>
+
+    </main>
+
+</body>
+</html>
