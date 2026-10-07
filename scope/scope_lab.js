@@ -18,3 +18,4 @@ console.log(globalConst); // Output: "I'm a global constant"
 
 //Block Scope
 console.log(blockVar);
+console.log("Teste do git commit"); 
