@@ -4,28 +4,38 @@ function submitFeedback(){}
 //Variaveis
 const submitButton = document.getElementById('submitBtn');
 
-submitButton.addEventListener('click',function(event){
+function getFeedbackData() {
+    return {
+        username: document.getElementById('name').value,
+        age: document.getElementById('age').value,
+        email: document.getElementById('email').value,
+        job: document.getElementById('job').value,
+        designation: document.getElementById('designation').value,
+        productType: document.getElementById('productType').value,
+        feedback: document.getElementById('feedbackText').value
+    };
+}
 
-    const username = document.getElementById('name').value;
-    const age = document.getElementById('age').value;
-    const email = document.getElementById('email').value;
-    const job = document.getElementById('job').value;
-    const designation = document.getElementById('designation').value;
-    const productType = document.getElementById('productType').value;
-    const feedback  = document.getElementById('feedbackText').value;
+function displayFeedback(data) {
+    document.getElementById('userName').textContent = data.username;
+    document.getElementById('userAge').textContent = data.age;
+    document.getElementById('userEmail').textContent = data.email;
+    document.getElementById('userJob').textContent = data.job;
+    document.getElementById('userDesignation').textContent = data.designation;
+    document.getElementById('userProductChoice').textContent = data.productType;
+    document.getElementById('userFeedback').textContent = data.feedback;
 
+    document.getElementById('userInfo').style.display = 'block';
+}
 
-    document.getElementById('userName').innerHTML = username;
-    document.getElementById('userAge').innerHTML = age;
-    document.getElementById('userEmail').innerHTML = email;
-    document.getElementById('userJob').innerHTML = job;
-    document.getElementById('userDesignation').innerHTML = designation;
-    document.getElementById('userProductChoice').innerHTML = productType;
-    document.getElementById('userFeedback').innerHTML = feedback;
-
-    
+function submitFeedback(event) {
     event.preventDefault();
-    console.log(username, age, email, job, designation, productType, feedback);
-    //alert('Thank you for your valuable feedback')
-});
 
+    const feedbackData = getFeedbackData();
+
+    displayFeedback(feedbackData);
+
+    console.log(feedbackData);
+}
+
+submitButton.addEventListener('click', submitFeedback);
