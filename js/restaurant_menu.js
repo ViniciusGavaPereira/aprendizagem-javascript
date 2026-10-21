@@ -10,3 +10,11 @@ const breakFeastMenuItemHTML = breakfastMenu.map((item, index) =>
 document.getElementById('breakfastTotalItems').textContent =
  `Total Breakfast Items: ${breakfastMenu.length}`;
 document.getElementById('breakfastMenuItems').innerHTML = breakFeastMenuItemHTML;
+
+
+let mainCourseItem = '';
+mainCourseMenu.forEach((item, index) => {
+    mainCourseItem += `<p>Item ${index + 1}: ${item}</p>`;
+});
+
+document.getElementById('maincourseMenuItems').innerHTML = mainCourseItem;
