@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Área do usuário</title>
+
+
+    <style>
+
+        /* =================================
+           1. Configurações gerais
+        ================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+
+            font-family: Inter, Arial, sans-serif;
+
+            background: #f4f6fb;
+            color: #1c2740;
+        }
+
+
+        /* =================================
+           2. Cabeçalho da página
+        ================================= */
+
+        .top {
+            height: 76px;
+
+            background: #fff;
+            border-bottom: 1px solid #e8ebf2;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 max(24px, calc((100% - 1100px) / 2));
+        }
+
+
+        /* Identificação do portal */
+
+        .brand {
+            font-weight: 800;
+            letter-spacing: 1px;
+
+            color: #3157d5;
+        }
+
+
+        /* Link para sair da conta */
+
+        .top a {
+            color: #66738a;
+
+            text-decoration: none;
+
+            font-size: 14px;
+        }
+
+
+        /* =================================
+           3. Área principal do conteúdo
+        ================================= */
+
+        .wrap {
+            max-width: 1100px;
+
+            margin: 48px auto;
+
+            padding: 0 24px;
+        }
+
+
+        /* Título de boas-vindas */
+
+        h1 {
+            font-size: 30px;
+
+            margin: 0 0 8px;
+        }
+
+
+        /* Texto descritivo */
+
+        .muted {
+            color: #738097;
+
+            line-height: 1.6;
+        }
+
+
+        /* =================================
+           4. Banner de boas-vindas
+        ================================= */
+
+        .welcome {
+            background: linear-gradient(120deg, #3157d5, #5478e8);
+
+            color: #fff;
+
+            padding: 34px;
+
+            border-radius: 18px;
+
+            margin: 28px 0;
+        }
+
+
+        /* Texto dentro do banner */
+
+        .welcome p {
+            color: #e5ebff;
+
+            margin-bottom: 0;
+        }
+
+
+        /* =================================
+           5. Organização dos cards
+        ================================= */
+
+        .grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            gap: 18px;
+        }
+
+
+        /* Estrutura individual dos cards */
+
+        .card {
+            background: #fff;
+
+            padding: 24px;
+
+            border: 1px solid #e8ebf2;
+            border-radius: 14px;
+        }
+
+
+        /* Título dos cards */
+
+        .card h3 {
+            margin: 0 0 10px;
+        }
+
+
+        /* Descrição dos cards */
+
+        .card p {
+            color: #738097;
+
+            line-height: 1.5;
+        }
+
+
+        /* =================================
+           6. Botões de acesso
+        ================================= */
+
+        .btn {
+            display: inline-block;
+
+            margin-top: 8px;
+
+            padding: 11px 15px;
+
+            border-radius: 9px;
+
+            background: #eef2ff;
+            color: #3157d5;
+
+            text-decoration: none;
+
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+
+        /* =================================
+           7. Responsividade
+        ================================= */
+
+        @media (max-width: 650px) {
+
+            /* Organiza os cards em uma coluna */
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            /* Ajusta o espaçamento do conteúdo */
+
+            .wrap {
+                margin: 30px auto;
+            }
+
+
+            /* Reduz o espaçamento do banner */
+
+            .welcome {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         1. Cabeçalho da página
+    ================================== -->
+
+    <header class="top">
+
+
+        <!-- Identificação do portal -->
+
+        <div class="brand">
+            PORTAL
+        </div>
+
+
+        <!-- Link para sair da conta -->
+
+        <a href="login.html">
+            Sair da conta ↗
+        </a>
+
+    </header>
+
+
+    <!-- =================================
+         2. Conteúdo principal
+    ================================== -->
+
+    <main class="wrap">
+
+
+        <!-- Saudação ao usuário -->
+
+        <h1>
+            Olá, Mariana!
+        </h1>
+
+        <p class="muted">
+            Este é seu espaço de trabalho. Aqui você encontra
+            os recursos disponíveis para o seu perfil.
+        </p>
+
+
+        <!-- =================================
+             3. Banner de boas-vindas
+        ================================== -->
+
+        <section class="welcome">
+
+            <h2>
+                Bem-vinda à plataforma
+            </h2>
+
+            <p>
+                Seu acesso está ativo. Utilize os atalhos abaixo
+                para continuar suas atividades.
+            </p>
+
+        </section>
+
+
+        <!-- =================================
+             4. Cards de funcionalidades
+        ================================== -->
+
+        <section class="grid">
+
+
+            <!-- Card: Meu perfil -->
+
+            <article class="card">
+
+                <h3>
+                    Meu perfil
+                </h3>
+
+                <p>
+                    Consulte e atualize suas informações cadastrais.
+                </p>
+
+                <a class="btn" href="#">
+                    Acessar perfil
+                </a>
+
+            </article>
+
+
+            <!-- Card: Minhas solicitações -->
+
+            <article class="card">
+
+                <h3>
+                    Minhas solicitações
+                </h3>
+
+                <p>
+                    Acompanhe o andamento das solicitações realizadas.
+                </p>
+
+                <a class="btn" href="#">
+                    Ver solicitações
+                </a>
+
+            </article>
+
+
+            <!-- Card: Documentos -->
+
+            <article class="card">
+
+                <h3>
+                    Documentos
+                </h3>
+
+                <p>
+                    Consulte os documentos disponibilizados para você.
+                </p>
+
+                <a class="btn" href="#">
+                    Consultar documentos
+                </a>
+
+            </article>
+
+
+            <!-- Card: Central de ajuda -->
+
+            <article class="card">
+
+                <h3>
+                    Central de ajuda
+                </h3>
+
+                <p>
+                    Encontre orientações ou entre em contato com o suporte.
+                </p>
+
+                <a class="btn" href="suporte.html">
+                    Acessar suporte
+                </a>
+
+            </article>
+
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

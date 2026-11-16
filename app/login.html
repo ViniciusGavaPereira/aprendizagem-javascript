@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entrar | Portal</title>
+<style>
+:root{--primary:#3157d5;--dark:#172033;--muted:#68738a;--bg:#f3f5fa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--dark);min-height:100vh;display:grid;place-items:center;padding:24px}
+.login{width:min(100%,420px);background:#fff;padding:40px;border-radius:20px;box-shadow:0 18px 55px #18264a18}
+.brand{font-size:14px;font-weight:800;letter-spacing:2px;color:var(--primary);margin-bottom:32px}
+h1{font-size:28px;margin:0 0 8px}.sub{color:var(--muted);margin:0 0 28px;line-height:1.5}
+label{display:block;font-size:13px;font-weight:700;margin:18px 0 8px}
+input{width:100%;padding:14px;border:1px solid #dce1eb;border-radius:10px;font-size:15px;outline:none}
+input:focus{border-color:var(--primary);box-shadow:0 0 0 3px #3157d51a}
+button{width:100%;border:0;background:var(--primary);color:white;padding:15px;border-radius:10px;font-weight:700;font-size:15px;margin-top:24px;cursor:pointer}
+button:hover{background:#2446b7}.help{display:flex;justify-content:space-between;gap:12px;margin-top:18px;font-size:13px}
+a{color:var(--primary);text-decoration:none}.foot{text-align:center;color:#929bad;font-size:12px;margin-top:32px}
+</style>
+</head>
+<body>
+<main class="login">
+  <div class="brand">PORTAL • ACESSO</div>
+  <h1>Bem-vindo de volta</h1>
+  <p class="sub">Entre com suas credenciais para acessar a plataforma.</p>
+  <form action="#" method="post">
+    <label for="email">E-mail corporativo</label><input id="email" name="email" type="email" placeholder="nome@empresa.com" autocomplete="username" required>
+    <label for="senha">Senha</label><input id="senha" name="senha" type="password" placeholder="Digite sua senha" autocomplete="current-password" required>
+    <button type="submit">Entrar</button>
+  </form>
+  <div class="help"><a href="#">Esqueci minha senha</a><a href="suporte.html">Precisa de ajuda?</a></div>
+  <div class="foot">© 2026 Portal. Todos os direitos reservados.</div>
+</main>
+</body></html>
