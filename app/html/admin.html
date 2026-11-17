@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel administrativo</title>
+
+    <style>
+        /* Configurações gerais */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: #f4f6fb;
+            color: #1c2740;
+        }
+
+        /* Estrutura principal */
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Menu lateral */
+        .side {
+            width: 245px;
+            background: #17233d;
+            color: #fff;
+            padding: 28px 20px;
+        }
+
+        .logo {
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            margin: 0 0 42px;
+        }
+
+        /* Links de navegação */
+        .nav a {
+            display: block;
+            color: #c8d1e3;
+            text-decoration: none;
+            padding: 13px 14px;
+            border-radius: 9px;
+            margin: 5px 0;
+        }
+
+        .nav a.active,
+        .nav a:hover {
+            background: #2a3b60;
+            color: #fff;
+        }
+
+        /* Conteúdo principal */
+        .main {
+            flex: 1;
+            min-width: 0;
+        }
+
+        /* Cabeçalho superior */
+        .top {
+            height: 76px;
+            background: #fff;
+            border-bottom: 1px solid #e8ebf2;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 34px;
+        }
+
+        .user {
+            font-size: 14px;
+            color: #59657c;
+        }
+
+        /* Área de conteúdo */
+        .content {
+            padding: 34px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: 28px;
+        }
+
+        .muted {
+            color: #738097;
+            margin: 0 0 28px;
+        }
+
+        /* Cards de indicadores */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #e8ebf2;
+            border-radius: 14px;
+            padding: 22px;
+        }
+
+        .card small {
+            color: #77839a;
+        }
+
+        .number {
+            font-size: 30px;
+            font-weight: 800;
+            margin-top: 12px;
+        }
+
+        /* Painel de usuários */
+        .panel {
+            background: #fff;
+            border: 1px solid #e8ebf2;
+            border-radius: 14px;
+            padding: 24px;
+            margin-top: 22px;
+        }
+
+        /* Tabela */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th,
+        td {
+            padding: 14px 10px;
+            border-bottom: 1px solid #edf0f5;
+            font-size: 14px;
+        }
+
+        th {
+            color: #6c7890;
+            font-weight: 600;
+        }
+
+        /* Indicador de status */
+        .tag {
+            background: #e8f7ef;
+            color: #20834d;
+            padding: 5px 9px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        /* Responsividade para dispositivos menores */
+        @media (max-width: 760px) {
+
+            .side {
+                width: 76px;
+                padding: 22px 10px;
+            }
+
+            .logo {
+                font-size: 0;
+            }
+
+            .nav a {
+                font-size: 0;
+                text-align: center;
+            }
+
+            .nav a:first-letter {
+                font-size: 17px;
+            }
+
+            .content {
+                padding: 22px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .top {
+                padding: 0 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- Menu lateral -->
+        <aside class="side">
+
+            <div class="logo">
+                PORTAL ADMIN
+            </div>
+
+            <nav class="nav">
+
+                <a class="active" href="#">
+                    ▦ &nbsp; Visão geral
+                </a>
+
+                <a href="#">
+                    ♙ &nbsp; Usuários
+                </a>
+
+                <a href="#">
+                    ⚙ &nbsp; Configurações
+                </a>
+
+                <a href="#">
+                    ▤ &nbsp; Relatórios
+                </a>
+
+                <a href="login.html">
+                    ↪ &nbsp; Sair
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- Conteúdo principal -->
+        <main class="main">
+
+            <!-- Cabeçalho -->
+            <header class="top">
+
+                <strong>
+                    Painel administrativo
+                </strong>
+
+                <span class="user">
+                    Administrador ▾
+                </span>
+
+            </header>
+
+
+            <!-- Área de informações -->
+            <section class="content">
+
+                <h1>
+                    Visão geral
+                </h1>
+
+                <p class="muted">
+                    Acompanhe os indicadores e gerencie os acessos da plataforma.
+                </p>
+
+
+                <!-- Indicadores -->
+                <div class="cards">
+
+                    <article class="card">
+
+                        <small>
+                            Usuários cadastrados
+                        </small>
+
+                        <div class="number">
+                            1.284
+                        </div>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <small>
+                            Usuários ativos
+                        </small>
+
+                        <div class="number">
+                            1.106
+                        </div>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <small>
+                            Solicitações pendentes
+                        </small>
+
+                        <div class="number">
+                            18
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Tabela de usuários recentes -->
+                <section class="panel">
+
+                    <h3>
+                        Usuários recentes
+                    </h3>
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Nome</th>
+                                <th>Perfil</th>
+                                <th>Status</th>
+                                <th>Último acesso</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+                                <td>Mariana Costa</td>
+                                <td>Usuário padrão</td>
+                                <td>
+                                    <span class="tag">Ativo</span>
+                                </td>
+                                <td>Hoje, 09:42</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>Rafael Mendes</td>
+                                <td>Administrador</td>
+                                <td>
+                                    <span class="tag">Ativo</span>
+                                </td>
+                                <td>Hoje, 08:17</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>Camila Souza</td>
+                                <td>Usuário padrão</td>
+                                <td>
+                                    <span class="tag">Ativo</span>
+                                </td>
+                                <td>Ontem, 17:30</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
